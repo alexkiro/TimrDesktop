@@ -32,10 +32,10 @@ public class TimrMain {
             // handle exception
         }
 
-      //  LoginView v = new LoginView();
-//        v.setVisible(true);
-      TraySupport.getInstance().show();
-      MainView.getInstance().setVisible(true);
+        LoginView v = new LoginView();
+        v.setVisible(true);
+//      TraySupport.getInstance().show();
+//      MainView.getInstance().setVisible(true);
 
     }
 }

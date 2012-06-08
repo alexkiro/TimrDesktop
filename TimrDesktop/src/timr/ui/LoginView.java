@@ -5,6 +5,7 @@
 package timr.ui;
 
 import javax.swing.JOptionPane;
+import sun.applet.Main;
 import timr.service.Services;
 
 /**
@@ -112,11 +113,20 @@ public class LoginView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (Services.validateUser(userLoginField.getText(), String.copyValueOf(passLoginField.getPassword()))){
+        String user = userLoginField.getText();
+        String pass =String.copyValueOf(passLoginField.getPassword());
+        if (Services.validateUser(user, pass)){
             this.setVisible(false);
             this.dispose();
             timr.tray.TraySupport.getInstance().show();
             MainView.getInstance().setVisible(true);
+            
+            if (jComboBox1.getSelectedIndex() == 0){
+                MainView.getInstance().initStudentView(user, pass);
+            } else {
+                MainView.getInstance().initProfView(user, pass);
+            }
+            
         } else {
             JOptionPane.showMessageDialog(this, "Wrong username or password","Error!",JOptionPane.ERROR_MESSAGE);
             passLoginField.setText("");

@@ -28,7 +28,10 @@ public class MainView extends JFrame {
     private boolean watch;
 
     private MainView() {
-
+        setUp();
+    }
+    
+    private void setUp(){
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         this.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
@@ -37,13 +40,6 @@ public class MainView extends JFrame {
         progressBar.setString("");
         progressBar.setIndeterminate(true);
         this.add(progressBar);
-        setMenu(UserType.Student);
-
-        this.pack();
-        setToPosition();
-
-        initStudentView("Adrian2", "Adrian2");
-        //initProfView("busaco", "busaco");
     }
 
     /**
@@ -81,6 +77,14 @@ public class MainView extends JFrame {
     }
 
     public void initProfView(final String user, final String pass) {
+        
+        //setUp();
+        
+        setMenu(UserType.Teacher);
+
+        this.pack();
+        setToPosition();
+
         sendPanel = new SendPanel();
 
         Thread userInfoThread = new Thread(new Runnable() {
@@ -130,6 +134,14 @@ public class MainView extends JFrame {
 
     public boolean initStudentView(final String user, final String pass) {
 
+       // setUp();
+        
+        setMenu(UserType.Student);
+
+        this.pack();
+        setToPosition();
+
+        
         timePanel = new TimePanel();
 
         Thread userInfoThread = new Thread(new Runnable() {
@@ -183,6 +195,10 @@ public class MainView extends JFrame {
             JMenuItem miCourse = new JCheckBoxMenuItem("Courses");
             JMenuItem miLaboratory = new JCheckBoxMenuItem("Laboratories");
             JMenuItem miSeminars = new JCheckBoxMenuItem("Seminars");
+            
+            miCourse.setEnabled(false);
+            miLaboratory.setEnabled(false);
+            miSeminars.setEnabled(false);
             mView.add(miCourse);
             mView.add(miLaboratory);
             mView.add(miSeminars);        
@@ -203,6 +219,11 @@ public class MainView extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (MainModel.getInstance().userType == UserType.Student){
+                    MainView.getInstance().remove(timePanel);
+                } else {
+                    MainView.getInstance().remove(sendPanel);
+                }
                 TraySupport.getInstance().removeTray();
                 setVisible(false);
                 dispose();
