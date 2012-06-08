@@ -1,21 +1,16 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package timr.model.messages;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
-import java.util.Calendar;
-import java.util.Formatter;
 import javax.swing.*;
 import timr.timrutil.Utils;
 import timr.ui.windows.MouseInfo;
 
 /**
- *
+ * Class that holds information about a feed sent by a professor.
  * @author Kiro
  */
 public class Feed extends Message {

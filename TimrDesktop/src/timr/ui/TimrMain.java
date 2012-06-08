@@ -9,7 +9,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import timr.tray.TraySupport;
 
 /**
- *
+ * Entry point of the application.
  * @author kiro
  */
 public class TimrMain {

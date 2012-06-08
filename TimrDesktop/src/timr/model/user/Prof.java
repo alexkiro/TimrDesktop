@@ -3,6 +3,10 @@ package timr.model.user;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * A teacher.
+ * @author Kiro
+ */
 public class Prof extends User{
 	public List<Faculty> faculties = new LinkedList<Faculty>();
        

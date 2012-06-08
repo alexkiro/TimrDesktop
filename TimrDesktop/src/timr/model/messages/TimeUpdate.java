@@ -13,7 +13,7 @@ import timr.timrutil.Utils;
 import timr.ui.windows.MouseInfo;
 
 /**
- *
+ * Class that holds information about a timetable update.
  * @author Kiro
  */
 public class TimeUpdate extends Message {

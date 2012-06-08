@@ -17,7 +17,7 @@ import timr.ui.TimrError;
 import timr.ui.windows.MouseInfo;
 
 /**
- *
+ * Class that holds information about a monitored site update
  * @author Kiro
  */
 public class SiteUpdate extends Message{

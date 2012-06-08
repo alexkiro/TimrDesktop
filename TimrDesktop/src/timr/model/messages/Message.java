@@ -15,10 +15,9 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import timr.model.MainModel;
 import timr.service.Services;
-import timr.ui.MainView;
 
 /**
- *
+ * Class that holds the notification information.
  * @author Kiro
  */
 public abstract class Message {

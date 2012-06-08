@@ -5,6 +5,10 @@ import java.util.LinkedList;
 import java.util.Map;
 import timr.model.timetable.Group;
 
+/**
+ * A student.
+ * @author Kiro
+ */
 public class Stud extends User{
 	public LinkedList<Group> group = new LinkedList<Group>();
         public LinkedList<String> faculties = new LinkedList<String>();

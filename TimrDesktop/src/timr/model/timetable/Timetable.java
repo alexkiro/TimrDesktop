@@ -6,7 +6,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 
-
+/**
+ * A timetable. Contains a list of timetable item organized by days of the week.
+ * @author Kiro
+ */
 public class Timetable {
 	public Map<Days, LinkedList<TableItem>> map = new HashMap<Days, LinkedList<TableItem>>();
 	public Timetable(){

@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package timr.ui;
 
 import java.util.LinkedList;
@@ -16,7 +12,7 @@ import timr.model.user.Prof;
 import timr.service.Services;
 
 /**
- *
+ * Panel for teacher, that allows him to send messages to groups from his faculties.
  * @author Kiro
  */
 public class SendPanel extends javax.swing.JPanel {

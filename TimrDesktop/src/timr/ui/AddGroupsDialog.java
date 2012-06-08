@@ -11,7 +11,8 @@ import java.util.List;
 import javax.swing.DefaultListModel;
 
 /**
- *
+ * Dialog that displays a list of items, and provide a mean for the user to
+ * perform a multiple selection on it, and return it to the dialog creator.
  * @author kiro
  */
 public class AddGroupsDialog extends javax.swing.JDialog {

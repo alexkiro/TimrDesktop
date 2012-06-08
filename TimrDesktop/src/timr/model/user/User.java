@@ -6,5 +6,4 @@ public class User {
 	public String name;
 	public UserType userType;
 	public String email;
-
 }

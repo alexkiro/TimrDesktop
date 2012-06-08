@@ -17,7 +17,8 @@ import timr.model.messages.Message;
 import timr.ui.MainView;
 
 /**
- *
+ * A extension of a JWindow, not decorated, running in a new thread, displaying 
+ * itself in the upper-right corner for a short period of time.
  * @author kiro
  */
 public class Notification extends JWindow implements Runnable, MouseInputListener {

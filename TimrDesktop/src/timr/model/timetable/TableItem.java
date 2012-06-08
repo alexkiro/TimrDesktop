@@ -20,6 +20,10 @@ import timr.ui.TimrError;
 import timr.ui.windows.MouseInfo;
 import timr.xml.XmlParser;
 
+/**
+ * A timetable item.
+ * @author Kiro
+ */
 public class TableItem {
 
     public String startTime;
@@ -40,6 +44,11 @@ public class TableItem {
                 + optionalPackage + " " + group);
     }
 
+    /**
+     * Returns the data about the timetable item in a panel form.
+     * Also ads the necessary mouse and action listeners.
+     * @return 
+     */
     public JPanel toPanel() {
         JPanel p = new JPanel(new BorderLayout());
         p.setBackground(Color.white);

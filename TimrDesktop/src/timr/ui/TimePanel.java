@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package timr.ui;
 
 import java.util.Calendar;
@@ -12,7 +8,7 @@ import timr.model.timetable.Days;
 import timr.model.timetable.TableItem;
 
 /**
- *
+ * Panel for student, that displays the timetable and notifications.
  * @author kiro
  */
 public class TimePanel extends javax.swing.JPanel {

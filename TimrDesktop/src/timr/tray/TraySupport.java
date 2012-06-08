@@ -17,6 +17,11 @@ import javax.swing.SwingUtilities;
 import timr.model.messages.Feed;
 import timr.ui.MainView;
 
+/**
+ * Provides a system tray implementation that should work on any system that is 
+ * supported. Currently tested on Ubuntu Unity and Windows 7.
+ * @author Kiro
+ */
 public class TraySupport {
 
     private TraySupport() {

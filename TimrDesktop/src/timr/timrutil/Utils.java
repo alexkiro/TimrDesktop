@@ -18,6 +18,12 @@ import timr.tray.TraySupport;
  */
 public final class Utils {
 
+    /**
+     * Creates image from path, with description.
+     * @param path
+     * @param description
+     * @return 
+     */
     public static Image createImage(String path, String description) {
         URL imageURL = TraySupport.class.getResource(path);
 
@@ -29,6 +35,11 @@ public final class Utils {
         }
     }
 
+    /**
+     * Compares the given date with the current time and returns an appropiate String.
+     * @param d1
+     * @return 
+     */
     public static String compareDate(Date d1) {
         Date time = Calendar.getInstance().getTime();
         if (d1.getYear() == time.getYear()) {
@@ -89,6 +100,12 @@ public final class Utils {
         
     }
 
+    /**
+     * Wraps a message, divinding it with br tags.
+     * @param message
+     * @param line
+     * @return 
+     */
     public static String wrapMessage(String message, int line) {
         StringBuilder sb = new StringBuilder();
         StringTokenizer st = new StringTokenizer(message);

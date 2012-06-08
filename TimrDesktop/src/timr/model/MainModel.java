@@ -4,7 +4,6 @@
  */
 package timr.model;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,7 +17,7 @@ import timr.service.Services;
 import timr.tray.Notification;
 
 /**
- *
+ * Singleton class that maintains the data about the currently logged user
  * @author kiro
  */
 public class MainModel {
@@ -32,6 +31,11 @@ public class MainModel {
     public Date lastUpdate;
     public int updateDelay = 10;
     
+    /**
+     * Gets the notifications from the server and verifies if there are any updates.
+     * if so send a Notification Window
+     * @return true if there are updates, false otherwise
+     */
     public boolean updateAndCompare(){
         List<Message> msgs = Services.getStudentNotifications(stud.user, 10, unsolved);
         List<Message> newMessages = new LinkedList<Message>();
@@ -55,6 +59,13 @@ public class MainModel {
         
     }
     
+    /**
+     * Loads and saves student information from the server.
+     * This information includes: the timetable, the monitored subjects and
+     * web sites, the subscribed groups, email and name
+     * @param username
+     * @param pass 
+     */
     public void loadStudInfo(String username, String pass){
          
          userType = UserType.Student;
@@ -65,6 +76,13 @@ public class MainModel {
          
     }
     
+    /**
+     * Loads and saves professor information from the server.
+     * This information includes: the faculties that he works in, the groups 
+     * that he can send messages to, name and email.
+     * @param username
+     * @param pass 
+     */
     public void loadProfInfo(String username, String pass){
         userType = UserType.Teacher;
         prof = Services.getTeacherXML(username);
@@ -76,7 +94,11 @@ public class MainModel {
         
     }
     
-    public void loadUserNotificatons(){
+    /**
+     * Initial load of the user notifications. 10 maximum.
+     * 
+     */
+    public void loadUserNotificatons(){ //TODO: set variable maximum number of notifications.
         messages = Services.getStudentNotifications(stud.user, 10, unsolved);
         lastUpdate = messages.get(0).date;
     }

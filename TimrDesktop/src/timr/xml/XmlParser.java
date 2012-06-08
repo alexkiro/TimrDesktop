@@ -1,13 +1,15 @@
 package timr.xml;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.io.Writer;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -17,12 +19,6 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-
-import timr.model.timetable.Days;
-import timr.model.user.Stud;
-import timr.model.timetable.TableItem;
-import timr.model.timetable.Timetable;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -33,9 +29,19 @@ import timr.model.messages.Feed;
 import timr.model.messages.Message;
 import timr.model.messages.SiteUpdate;
 import timr.model.messages.TimeUpdate;
+import timr.model.timetable.Days;
+import timr.model.timetable.TableItem;
+import timr.model.timetable.Timetable;
 import timr.model.user.Faculty;
 import timr.model.user.Prof;
+import timr.model.user.Stud;
 
+
+/**
+ * Class that provides methods for parsing the XML messages sent from the server,
+ * or create some XML message in order to be sent to the server.
+ * @author Kiro
+ */
 public class XmlParser {
     
     public static final String SiteUpdate = "MonitoredWebsitesNotification";

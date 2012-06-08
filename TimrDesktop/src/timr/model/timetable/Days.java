@@ -1,5 +1,9 @@
 package timr.model.timetable;
 
+/**
+ * Days of the week
+ * @author Kiro
+ */
 public enum Days {
 	
 		SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY;

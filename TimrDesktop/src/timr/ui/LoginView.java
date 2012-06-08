@@ -8,7 +8,9 @@ import javax.swing.JOptionPane;
 import timr.service.Services;
 
 /**
- *
+ * JFrame for login. Should start the MainView if the login is correct. And it's 
+ * responsible for selecting the proper way to display the MainView according
+ * to the user's type
  * @author kiro
  */
 public class LoginView extends javax.swing.JFrame {

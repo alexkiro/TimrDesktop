@@ -12,7 +12,8 @@ import javax.swing.JWindow;
 import timr.ui.MainView;
 
 /**
- *
+ * A undecoreted windows that it will be displayed when the mouse hovers over 
+ * timetable items panel or notifications panel
  * @author kiro
  */
 public class InfoWindow extends JWindow implements Runnable {

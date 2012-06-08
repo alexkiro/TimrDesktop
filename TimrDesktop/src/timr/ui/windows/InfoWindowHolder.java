@@ -5,7 +5,7 @@
 package timr.ui.windows;
 
 /**
- *
+ * A InfoWindows Holder, that makes sure that there is only one InfoWindow at one time.
  * @author Kiro
  */
 public class InfoWindowHolder {

@@ -8,7 +8,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.event.MouseInputListener;
 
 /**
- *
+ * Mouse listener for displaying InfoWindows on hover.
  * @author kiro
  */
 public class MouseInfo implements MouseInputListener {

@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package timr.ui;
 
 import java.awt.Dimension;
@@ -17,7 +14,10 @@ import timr.model.user.UserType;
 import timr.tray.TraySupport;
 
 /**
- *
+ * The main JFrame of the application. Has 2 possible forms: 
+ * For Student - displaying the timetable and the notification (See TimePanel),
+ * For Teacher - displaying the send ui, which gives the teacher the possibility to
+ * send messages to the groups See SendPanel),.
  * @author kiro
  */
 public class MainView extends JFrame {
@@ -46,6 +46,9 @@ public class MainView extends JFrame {
         //initProfView("busaco", "busaco");
     }
 
+    /**
+     * Starts a thread that will check for updates regulary. (See MainModel)
+     */
     public void startNotificationWatch() {
         watch = true;
         Thread t = new Thread(new Runnable() {

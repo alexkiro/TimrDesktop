@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * A faculty and it's groups. Used by teacher to send messages.
  * @author kiro
  */
 public class Faculty {
