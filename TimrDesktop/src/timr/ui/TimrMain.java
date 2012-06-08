@@ -12,7 +12,7 @@ import timr.tray.TraySupport;
  *
  * @author kiro
  */
-public class Timr2 {
+public class TimrMain {
 
     /**
      * @param args the command line arguments
